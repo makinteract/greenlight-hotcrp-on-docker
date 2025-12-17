@@ -64,7 +64,8 @@ services:
         image: nginx:alpine
         restart: always
         ports:
-            - 9001:80
+            # - 9001:80
+            - 80:80
         volumes:
             - ./app:/srv/www/api
             - ./logs/nginx:/var/log/nginx

@@ -42,3 +42,11 @@ This repository contains scripts and a guide to install docker containers for a 
 ```
 docker compose exec smtp /bin/ls /var/log/maillog
 ```
+
+## Note
+
+To login with mosh
+
+```sh
+mosh -p 60050:60060 root@<YOUR_IP>
+```

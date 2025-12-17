@@ -33,18 +33,17 @@ CREATE TABLE `ActionLog` (
   `action` varbinary(4096) NOT NULL,
   `data` varbinary(8192) DEFAULT NULL,
   PRIMARY KEY (`logId`)
-) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `ActionLog`
 --
 
--- LOCK TABLES `ActionLog` WRITE;
--- /*!40000 ALTER TABLE `ActionLog` DISABLE KEYS */;
--- INSERT INTO `ActionLog` VALUES (47,1,NULL,NULL,NULL,1763596399,_binary '172.18.0.1',_binary 'Settings edited: opt.contactEmail',NULL),(48,1,NULL,NULL,NULL,1763620591,_binary '172.18.0.1',_binary 'Settings edited: options, ioptions',NULL);
--- /*!40000 ALTER TABLE `ActionLog` ENABLE KEYS */;
--- UNLOCK TABLES;
+LOCK TABLES `ActionLog` WRITE;
+/*!40000 ALTER TABLE `ActionLog` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ActionLog` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `Capability`
@@ -80,7 +79,7 @@ CREATE TABLE `Capability` (
 
 LOCK TABLES `Capability` WRITE;
 /*!40000 ALTER TABLE `Capability` DISABLE KEYS */;
-INSERT INTO `Capability` VALUES (1,2,0,0,1763538571,0,0,0,1763797771,_binary 'hcpw0dPxgVrRpBbKTuYonYCqppmfHRmNpzA',NULL,NULL,NULL,NULL,NULL,NULL),(1,4,0,0,1763594269,0,0,0,1763853469,_binary 'hcpw0oAnFWDDKMcDeoWMBGprtKoQWwTyRcA',NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `Capability` VALUES (1,7,0,0,1765845120,0,0,0,1766104320,_binary 'hcpw0sfCiXNqRhFqfDWVBzJxoxRmthhmeDA',NULL,NULL,NULL,NULL,NULL,NULL),(7,1,0,0,1764993254,1765262989,2,0,0,_binary 'hct_qkSkjMgFWciXLNMrMhrTeNziUCfGXsNnHMJEVBVCHRyD',NULL,NULL,_binary '{\"note\":\"pdf-maker\"}',NULL,NULL,NULL);
 /*!40000 ALTER TABLE `Capability` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -112,6 +111,7 @@ CREATE TABLE `ContactCounter` (
 
 LOCK TABLES `ContactCounter` WRITE;
 /*!40000 ALTER TABLE `ContactCounter` DISABLE KEYS */;
+INSERT INTO `ContactCounter` VALUES (1,24,5003,1765289026562,0,0,272,1765287746808,0,0);
 /*!40000 ALTER TABLE `ContactCounter` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -149,7 +149,7 @@ CREATE TABLE `ContactInfo` (
   PRIMARY KEY (`contactId`),
   UNIQUE KEY `email` (`email`),
   KEY `roles` (`roles`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -158,7 +158,7 @@ CREATE TABLE `ContactInfo` (
 
 LOCK TABLES `ContactInfo` WRITE;
 /*!40000 ALTER TABLE `ContactInfo` DISABLE KEYS */;
-INSERT INTO `ContactInfo` VALUES (1,'andrea@kaist.ac.kr',_binary 'Andrea',_binary 'Bianchi',_binary 'andrea bianchi (kaist)',_binary 'KAIST',7,0,NULL,0,NULL,NULL,_binary 'KR',_binary ' $$2y$10$yAziFPKZi71pOQObI3A/oeZLsMJ/BgK6DxlwXlUQAgrh7VhaT.wDa',1763538671,1763538671,_binary 'None',NULL,1763538657,1763620591,2,0,NULL),(2,'andrea@kaist.ac.k.r','','','','',0,0,NULL,32,NULL,NULL,NULL,_binary ' unset',1763538571,0,NULL,NULL,0,0,2,0,NULL),(3,'andrea@kaist.id',_binary 'Anonymous',_binary 'Author',_binary 'anonymous author (anonymous)',_binary 'Anonymous',0,0,NULL,8,NULL,NULL,_binary 'KR','',0,0,_binary 'None',NULL,1763594235,0,2,0,NULL),(4,'dummy.twiddle036@passinbox.com',_binary 'Anonymous',_binary 'PC',_binary 'anonymous pc (anonymous)',_binary 'Anonymous',0,0,NULL,40,NULL,NULL,_binary 'KR','',0,0,_binary 'None',NULL,1763594269,0,2,0,NULL);
+INSERT INTO `ContactInfo` VALUES (1,'andrea@kaist.ac.kr',_binary 'Andrea',_binary 'Bianchi',_binary 'andrea bianchi (kaist)',_binary 'KAIST',7,0,NULL,0,NULL,NULL,_binary 'KR',_binary ' $$2y$10$yAziFPKZi71pOQObI3A/oeZLsMJ/BgK6DxlwXlUQAgrh7VhaT.wDa',1763538671,1765951769,_binary 'None',NULL,1763538657,1765951109,2,0,NULL),(2,'andrea@kaist.ac.k.r','','','','',0,0,NULL,32,NULL,NULL,NULL,_binary ' unset',1763538571,0,NULL,NULL,0,0,2,0,NULL),(3,'andrea@kaist.id',_binary 'Anonymous',_binary 'Author',_binary 'anonymous author (anonymous)',_binary 'Anonymous',0,0,NULL,8,NULL,NULL,_binary 'KR','',0,0,_binary 'None',NULL,1763594235,0,2,0,NULL),(4,'dummy.twiddle036@passinbox.com',_binary 'Anonymous',_binary 'PC',_binary 'anonymous pc (anonymous)',_binary 'Anonymous',0,0,NULL,40,NULL,NULL,_binary 'KR','',0,0,_binary 'None',NULL,1763594269,0,2,0,NULL),(5,'hci.relax421@passmail.net',_binary 'Author',_binary 'HCI',_binary 'author hci (hci)',_binary 'HCI',0,0,NULL,8,NULL,NULL,NULL,'',0,0,NULL,NULL,0,0,2,0,NULL),(6,'uaiti.resilient293@passmail.net',_binary 'Reviewer',_binary 'Uaiti',_binary 'reviewer uaiti (u)',_binary 'U',0,0,NULL,40,NULL,NULL,NULL,'',0,0,_binary 'None',NULL,1765285656,0,2,0,NULL),(7,'jolieheejikim@kaist.ac.kr','','','','',0,0,NULL,32,NULL,NULL,NULL,_binary ' unset',1765845120,0,NULL,NULL,0,0,2,0,NULL);
 /*!40000 ALTER TABLE `ContactInfo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -208,7 +208,7 @@ CREATE TABLE `DeletedContactInfo` (
 
 LOCK TABLES `DeletedContactInfo` WRITE;
 /*!40000 ALTER TABLE `DeletedContactInfo` DISABLE KEYS */;
-INSERT INTO `DeletedContactInfo` VALUES (3,_binary 'Anonymous',_binary 'Author',_binary 'anonymous author (anonymous)','andrea@kaist.id',_binary 'Anonymous'),(4,_binary 'Anonymous',_binary 'PC',_binary 'anonymous pc (anonymous)','dummy.twiddle036@passinbox.com',_binary 'Anonymous');
+INSERT INTO `DeletedContactInfo` VALUES (3,_binary 'Anonymous',_binary 'Author',_binary 'anonymous author (anonymous)','andrea@kaist.id',_binary 'Anonymous'),(4,_binary 'Anonymous',_binary 'PC',_binary 'anonymous pc (anonymous)','dummy.twiddle036@passinbox.com',_binary 'Anonymous'),(6,_binary 'Reviewer',_binary 'Uaiti',_binary 'reviewer uaiti (u)','uaiti.resilient293@passmail.net',_binary 'U'),(5,_binary 'Author',_binary 'HCI',_binary 'author hci (hci)','hci.relax421@passmail.net',_binary 'HCI');
 /*!40000 ALTER TABLE `DeletedContactInfo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -303,7 +303,7 @@ CREATE TABLE `IDReservation` (
   `uid` int NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`type`,`id`),
   UNIQUE KEY `uid` (`uid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -445,7 +445,7 @@ CREATE TABLE `Paper` (
   KEY `timeSubmitted` (`timeSubmitted`),
   KEY `leadContactId` (`leadContactId`),
   KEY `shepherdContactId` (`shepherdContactId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -600,7 +600,7 @@ CREATE TABLE `PaperReview` (
   KEY `reviewType` (`reviewType`),
   KEY `reviewRound` (`reviewRound`),
   KEY `requestedBy` (`requestedBy`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -650,6 +650,7 @@ CREATE TABLE `PaperReviewHistory` (
 
 LOCK TABLES `PaperReviewHistory` WRITE;
 /*!40000 ALTER TABLE `PaperReviewHistory` DISABLE KEYS */;
+INSERT INTO `PaperReviewHistory` VALUES (1,1,0,933,1,0,0,4,1,0,0,0,0,0,0,0,0,0,65553,_binary '{\"s04\":null,\"s02\":null,\"t01\":null,\"t04\":null,\"s03\":null,\"s01\":null}');
 /*!40000 ALTER TABLE `PaperReviewHistory` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -742,7 +743,7 @@ CREATE TABLE `PaperStorage` (
   `height` int NOT NULL DEFAULT '-1',
   PRIMARY KEY (`paperId`,`paperStorageId`),
   UNIQUE KEY `paperStorageId` (`paperStorageId`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -929,7 +930,7 @@ CREATE TABLE `Settings` (
 
 LOCK TABLES `Settings` WRITE;
 /*!40000 ALTER TABLE `Settings` DISABLE KEYS */;
-INSERT INTO `Settings` VALUES (_binary '__capability_gc',1763562455,NULL),(_binary 'allowPaperOption',318,NULL),(_binary 'extrev_chairreq',1,NULL),(_binary 'ioptions',1,_binary '[{\"id\":-1000,\"merge\":true,\"name\":\"Thesis Title\",\"title\":\"Thesis Title\"},{\"id\":-1001,\"merge\":true,\"description\":\"Put only the name of the student author.\"},{\"id\":-1005,\"merge\":true,\"form_order\":3607}]'),(_binary 'msg.home',1,_binary '<img src=\"https://seoulillustrationfair.co.kr/wp-content/uploads/2023/05/kaist55.jpg\" alt=\"KAIST illustration\" loading=\"lazy\" width=\"300\">'),(_binary 'no_papersub',1,NULL),(_binary 'opt.contactEmail',0,''),(_binary 'opt.longName',1,_binary 'ID KAIST GreenLight 2026'),(_binary 'opt.shortName',1,_binary 'GreenLight 2026'),(_binary 'options',1,_binary '[{\"id\":1,\"name\":\"KAIST Student ID\",\"type\":\"realnumber\",\"order\":6,\"description\":\"Insert your KAIST student ID\",\"display\":\"rest\",\"required\":\"submit\"}]'),(_binary 'outcome_map',1,_binary '{\"2\":\"Accepted (major revision)\",\"1\":\"Accepted (minor revision)\",\"-1\":\"Rejected\"}'),(_binary 'pcrev_any',1,NULL),(_binary 'pcrev_soft',0,NULL),(_binary 'rev_ratings',-1,NULL),(_binary 'review_form',1,_binary '[{\"id\":\"s04\",\"name\":\"Overall merit\",\"type\":\"radio\",\"order\":1,\"visibility\":\"au\",\"required\":true,\"values\":[\"Bottom 50% of submitted papers\",\"Top 50% but not top 25% of submitted papers\",\"Top 25% but not top 10% of submitted papers\",\"Top 10% but not top 5% of submitted papers\",\"Top 5% of submitted papers!\"]},{\"id\":\"s02\",\"name\":\"Reviewer expertise\",\"type\":\"radio\",\"order\":2,\"visibility\":\"au\",\"required\":true,\"values\":[\"No familiarity\",\"Some familiarity\",\"Knowledgeable\",\"Expert\"]},{\"id\":\"t01\",\"name\":\"Paper summary\",\"type\":\"text\",\"order\":3,\"visibility\":\"au\",\"required\":true},{\"id\":\"t04\",\"name\":\"Strengths and Weaknesses\",\"type\":\"text\",\"description\":\"What are the paper’s important strengths or weaknesses? Just a couple sentences, please.\",\"order\":4,\"visibility\":\"au\",\"required\":true},{\"id\":\"t02\",\"name\":\"Other comments for authors\",\"type\":\"text\",\"order\":5,\"visibility\":\"au\"},{\"id\":\"s03\",\"name\":\"Final defense schedule\",\"type\":\"dropdown\",\"description\":\"There are two options for the final defense. It can be on the announced date (D-Day) or self-scheduled. Choose your availability.\",\"order\":6,\"visibility\":\"re\",\"required\":true,\"scheme\":\"none\",\"values\":[\"Defense of D-Day\",\"Self-scheduled\"]},{\"id\":\"s01\",\"name\":\"Best thesis award nomination\",\"type\":\"checkbox\",\"description\":\"I nominate this paper for Best thesis award\",\"order\":7,\"visibility\":\"re\",\"scheme\":\"none\"},{\"id\":\"t05\",\"name\":\"Best thesis award explanation\",\"type\":\"text\",\"description\":\"Explain why you recommended this paper for Best Thesis. How strongly you recommend it?\",\"order\":8,\"visibility\":\"re\"},{\"id\":\"t03\",\"name\":\"Confidential comments for PC\",\"type\":\"text\",\"order\":9,\"visibility\":\"re\"}]'),(_binary 'sub_blind',0,NULL),(_binary 'sub_grace',3600,NULL),(_binary 'sub_reg',1743508799,NULL),(_binary 'sub_sub',1743508799,NULL),(_binary 'sub_update',1743508799,NULL),(_binary 'tag_chair',1,_binary 'accept pcpaper reject'),(_binary 'viewrevid',1,NULL);
+INSERT INTO `Settings` VALUES (_binary '__banal_count',0,_binary '882642909'),(_binary '__capability_gc',1765948597,NULL),(_binary 'allowPaperOption',318,NULL),(_binary 'extrev_chairreq',1,NULL),(_binary 'ioptions',1,_binary '[{\"id\":-1000,\"merge\":true,\"name\":\"Thesis Title\",\"title\":\"Thesis Title\"},{\"id\":-1001,\"merge\":true,\"description\":\"Put only the name of the student author.\",\"form_order\":3604},{\"id\":-1004,\"merge\":true,\"form_order\":3605},{\"id\":0,\"merge\":true,\"form_order\":3606},{\"id\":-1005,\"merge\":true,\"form_order\":3608}]'),(_binary 'msg.home',1,_binary '<img src=\"https://seoulillustrationfair.co.kr/wp-content/uploads/2023/05/kaist55.jpg\" alt=\"KAIST illustration\" loading=\"lazy\" width=\"300\">'),(_binary 'no_papersub',1,NULL),(_binary 'opt.conferenceSite',1,_binary 'https://greenlight.kaist.ac.kr'),(_binary 'opt.contactEmail',0,''),(_binary 'opt.longName',1,_binary 'Greenlight 2026'),(_binary 'opt.shortName',1,_binary 'Greenlight 2026'),(_binary 'options',9,_binary '[{\"id\":1,\"name\":\"KAIST Student ID\",\"type\":\"realnumber\",\"order\":3,\"description\":\"Insert your KAIST student ID\",\"display\":\"rest\",\"required\":\"submit\"},{\"id\":2,\"name\":\"Thesis type\",\"type\":\"dropdown\",\"order\":7,\"display\":\"rest\",\"required\":\"submit\",\"values\":[\"1. Research\",\"2. Development\"]}]'),(_binary 'outcome_map',1,_binary '{\"2\":\"Pass\",\"-1\":\"Fail\"}'),(_binary 'pcrev_any',1,NULL),(_binary 'pcrev_assigntime',1765286820,NULL),(_binary 'pcrev_soft',0,NULL),(_binary 'rev_ratings',-1,NULL),(_binary 'review_form',1,_binary '[{\"id\":\"s02\",\"name\":\"Reviewer expertise\",\"type\":\"radio\",\"order\":1,\"visibility\":\"au\",\"required\":true,\"values\":[\"No familiarity\",\"Some familiarity\",\"Knowledgeable\",\"Expert\"]},{\"id\":\"s04\",\"name\":\"Creativity\",\"type\":\"radio\",\"description\":\"Originality of the subject, creativity of the method\",\"order\":2,\"visibility\":\"au\",\"required\":true,\"scheme\":\"svr\",\"values\":[\"High\",\"Middle\",\"Low\"]},{\"id\":\"s05\",\"name\":\"Completness\",\"type\":\"radio\",\"description\":\"Progress, validity of the result\",\"order\":3,\"visibility\":\"au\",\"required\":true,\"scheme\":\"svr\",\"values\":[\"High\",\"Middle\",\"Low\"]},{\"id\":\"s06\",\"name\":\"Value\",\"type\":\"radio\",\"description\":\"Contribution to design research, Practical value\",\"order\":4,\"visibility\":\"au\",\"required\":true,\"scheme\":\"svr\",\"values\":[\"High\",\"Middle\",\"Low\"]},{\"id\":\"s07\",\"name\":\"Pass/Fail\",\"type\":\"radio\",\"order\":5,\"visibility\":\"au\",\"required\":true,\"scheme\":\"svr\",\"values\":[\"Pass\",\"Fail\"]},{\"id\":\"t01\",\"name\":\"Feedback\",\"type\":\"text\",\"description\":\"150~200 words\",\"order\":6,\"visibility\":\"au\",\"required\":true},{\"id\":\"s03\",\"name\":\"Final defense schedule\",\"type\":\"dropdown\",\"description\":\"There are two options for the final defense. It can be on the announced date (D-Day) or self-scheduled. Choose your availability.\",\"order\":7,\"visibility\":\"re\",\"required\":true,\"scheme\":\"none\",\"values\":[\"Defense of D-Day\",\"Self-scheduled\"]},{\"id\":\"s01\",\"name\":\"Best thesis award nomination\",\"type\":\"checkbox\",\"description\":\"I nominate this paper for Best thesis award\",\"order\":8,\"visibility\":\"re\",\"scheme\":\"none\"},{\"id\":\"t05\",\"name\":\"Best thesis award explanation\",\"type\":\"text\",\"description\":\"Explain why you recommended this paper for Best Thesis. How strongly you recommend it?\",\"order\":9,\"visibility\":\"re\"},{\"id\":\"t03\",\"name\":\"Confidential comments for PC\",\"type\":\"text\",\"order\":10,\"visibility\":\"re\"}]'),(_binary 'sub_blind',0,NULL),(_binary 'sub_reg',1797433200,NULL),(_binary 'sub_sub',1797433200,NULL),(_binary 'sub_update',1797433200,NULL),(_binary 'tag_chair',1,_binary 'accept pcpaper reject'),(_binary 'viewrevid',1,NULL);
 /*!40000 ALTER TABLE `Settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -989,4 +990,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-11-20  6:36:49
+-- Dump completed on 2025-12-17  6:49:36
