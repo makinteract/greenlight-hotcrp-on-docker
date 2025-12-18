@@ -1,5 +1,4 @@
-# run me with docker compose -f docker-compose.ssl.yaml up
-
+# run me with: docker compose -f docker-compose.ssl.yaml up -d
 
 version: "3"
 

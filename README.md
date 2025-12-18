@@ -43,6 +43,10 @@ This repository contains scripts and a guide to install docker containers for a 
 docker compose exec smtp /bin/ls /var/log/maillog
 ```
 
+## Addings SSL certificate
+
+Follow the instructions [here](https://github.com/makinteract/certbot-certifier).
+
 ## Note
 
 To login with mosh
