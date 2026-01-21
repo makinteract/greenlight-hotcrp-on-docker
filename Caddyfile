@@ -1,0 +1,14 @@
+gl.designware.xyz www.gl.designware.xyz {
+
+    root * /srv/www/api
+
+    php_fastcgi php:9000
+
+    file_server
+
+    encode gzip zstd
+
+    log {
+        output file /data/access.log
+    }
+}
