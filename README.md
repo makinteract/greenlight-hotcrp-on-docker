@@ -47,7 +47,9 @@ This repository contains scripts and a guide to install docker containers for a 
 docker compose exec smtp /bin/ls /var/log/maillog
 ```
 
-## HTTPS
+## Domain and HTTPS
+
+Use your provider and point your domain to the server.
 
 ## Note
 
