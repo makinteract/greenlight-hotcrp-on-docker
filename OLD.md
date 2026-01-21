@@ -74,3 +74,7 @@ SMTP_PASSWORD=<YOUR APP PASSOWRD>
 # Mandatory: Server hostname for the Postfix container. Emails will appear to come from the hostname's domain.
 SERVER_HOSTNAME=gmail.com
 ```
+
+## Addings SSL certificate
+
+Follow the instructions [here](https://github.com/makinteract/certbot-certifier).

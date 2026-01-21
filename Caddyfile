@@ -1,4 +1,4 @@
-gl.designware.xyz www.gl.designware.xyz {
+example.com www.example.com {
 
     root * /srv/www/api
 

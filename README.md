@@ -19,7 +19,9 @@ This repository contains scripts and a guide to install docker containers for a 
   git clone https://github.com/kohler/hotcrp app
 ```
 
-3. Set up the database using the initial settings or the default settings.
+3. If these folders were alreayd there remember to `git pull` from both.
+
+4. Set up the database using the initial settings or the default settings.
 
 ```
     chmod +x setup
@@ -28,9 +30,11 @@ This repository contains scripts and a guide to install docker containers for a 
     ./setup.sh
 ```
 
-4. Open `localhost:9001` in a webbrowser and add your account.
+5. You can start the server with `docker compose up -d` and then shot it down with `docker compose down` from now on.
 
-5. For backup.
+6. Open `localhost` in a webbrowser and add your account. The port served is 80, but you can change in the docker-compose.yaml file.
+
+7. For backup.
 
 ```
     chmod +x backup.sh
@@ -43,9 +47,7 @@ This repository contains scripts and a guide to install docker containers for a 
 docker compose exec smtp /bin/ls /var/log/maillog
 ```
 
-## Addings SSL certificate
-
-Follow the instructions [here](https://github.com/makinteract/certbot-certifier).
+## HTTPS
 
 ## Note
 
